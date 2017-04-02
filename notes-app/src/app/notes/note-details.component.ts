@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Note } from './note.model';
 
 @Component({
@@ -6,5 +6,5 @@ import { Note } from './note.model';
   templateUrl: './note-details.component.html'
 })
 export class NoteDetailsComponent {
-  selectedNote = {} as Note;
+  @Input() selectedNote = {} as Note;
 }
