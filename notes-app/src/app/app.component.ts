@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { Note } from './notes/note.model';
 
+enum NotesViewState {
+  display = 0,
+  create = 1
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,6 +14,9 @@ import { Note } from './notes/note.model';
 export class AppComponent {
   notes: Note[] = [];
   selectedNote: Note;
+  viewState = NotesViewState.display;
+
+  notesViewStateRef = NotesViewState;
 
   constructor() {
     this.notes = [
@@ -23,9 +31,15 @@ export class AppComponent {
 
   onSelectedItem(note: Note) {
     this.selectedNote = note;
+    this.viewState = NotesViewState.display;
   }
 
   onCreatedItem(note: Note) {
     this.notes.push(note);
+    this.viewState = NotesViewState.display;
+  }
+
+  createNote() {
+    this.viewState = NotesViewState.create;
   }
 }

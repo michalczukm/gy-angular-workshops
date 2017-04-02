@@ -7,3 +7,7 @@
 6. Do the same with adding note feature.
  * Move it to new component `CreateNoteComponent`
  * Add @Output `createdItem` in your new component
+7. The icing on the cake - lets hide components when not used.
+ * Handle `+` button with `createNote` method (create it) and hide `app-note-details` component if you're in creating state
+ * Hide `app-create-note` component if you're only watching details.
+ * Tip - use `*ngIf` and think about some state .. maybe variable, maybe enum.
