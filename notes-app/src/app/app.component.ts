@@ -8,6 +8,7 @@ import { Note } from './notes/note.model';
 })
 export class AppComponent {
   notes: Note[] = [];
+  selectedNote: Note;
 
   constructor() {
     this.notes = [
@@ -16,5 +17,7 @@ export class AppComponent {
       { title: 'Third note', content: 'Third note sample content', createdOn: new Date(2017, 4, 3, 17, 30) },
       { title: 'Fourth note', content: 'Fourth note sample content', createdOn: new Date(2017, 4, 4, 18, 30) },
     ] as Note[];
+
+    this.selectedNote = this.notes[0];
   }
 }
