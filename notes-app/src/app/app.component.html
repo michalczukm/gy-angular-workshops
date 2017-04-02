@@ -16,7 +16,7 @@
           <button class="btn btn-success btn-lg notes-list__button__elements pull-right">+</button>
         </div>
         <!--BEGIN: Notes list-->
-        <app-notes-list [notes]="notes"></app-notes-list>
+        <app-notes-list [notes]="notes" (selectedItem)="onSelectedItem($event)"></app-notes-list>
         <!--END: Notes list-->
       </div>
 

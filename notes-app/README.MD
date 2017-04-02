@@ -4,3 +4,6 @@
 3. We've added `ngForm` and `ngSubmit`, but still nothing changed. Add `newNote` to list, but remember - it also needs created date!
 4. Add missing `date` pipes.
 5. Adding components - finally! Same as I had extracted `NoteDetailsComponent` please create `NotesListComponent`. Hmm, what about `selectItem` method?
+6. Do the same with adding note feature.
+ * Move it to new component `CreateNoteComponent`
+ * Add @Output `createdItem` in your new component

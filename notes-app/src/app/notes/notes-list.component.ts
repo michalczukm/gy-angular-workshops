@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Note } from './note.model';
 
 @Component({
@@ -7,4 +7,12 @@ import { Note } from './note.model';
 })
 export class NotesListComponent {
   @Input() notes = [] as Note[];
+  @Output() selectedItem = new EventEmitter<Note>();
+
+  selectedNote: Note;
+
+  selectItem(note: Note) {
+    this.selectedNote = note;
+    this.selectedItem.emit(note);
+  }
 }
