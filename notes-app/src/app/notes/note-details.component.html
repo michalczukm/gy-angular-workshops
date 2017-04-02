@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>
+            {{ selectedNote.title }}
+        </h3>
+        <h4>
+            {{ selectedNote.createdOn | date: "dd/MM/yyyy HH:mm" }}
+        </h4>
+    </div>
+    <div class="panel-body">
+        <p class="text-justify">
+            {{ selectedNote.content }}
+        </p>
+    </div>
+</div>
