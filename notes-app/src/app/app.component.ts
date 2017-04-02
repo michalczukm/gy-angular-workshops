@@ -20,4 +20,8 @@ export class AppComponent {
 
     this.selectedNote = this.notes[0];
   }
+
+  selectItem(note: Note) {
+    this.selectedNote = note;
+  }
 }
