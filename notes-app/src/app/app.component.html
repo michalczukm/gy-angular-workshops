@@ -17,7 +17,7 @@
         </div>
         <!--BEGIN: Notes list-->
         <div class="list-group side__list">
-          <button *ngFor="let note of notes" (click)="selectItem(note)" class="list-group-item">
+          <button *ngFor="let note of notes" (click)="selectItem(note)" [ngClass]="{ 'active': note == selectedNote }" [disabled]="note == selectedNote" class="list-group-item">
             <div>
               <p>{{ note.title }}</p>
               <p class="badge">{{ note.createdOn }}</p>
