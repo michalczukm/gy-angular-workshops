@@ -21,7 +21,7 @@
             class="list-group-item">
             <div>
               <p>{{ note.title }}</p>
-              <p class="badge">{{ note.createdOn }}</p>
+              <p class="badge">{{ note.createdOn | date: "dd/MM/yyyy HH:mm" }}</p>
               <b *ngIf="note.content.length > 25" class="pull-right">It is long one</b>
             </div>
           </button>
@@ -37,7 +37,7 @@
               {{ selectedNote.title }}
             </h3>
             <h4>
-              {{ selectedNote.createdOn }}
+              {{ selectedNote.createdOn | date: "dd/MM/yyyy HH:mm" }}
             </h4>
           </div>
           <div class="panel-body">
