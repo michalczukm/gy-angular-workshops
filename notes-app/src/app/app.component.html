@@ -17,7 +17,8 @@
         </div>
         <!--BEGIN: Notes list-->
         <div class="list-group side__list">
-          <button *ngFor="let note of notes" (click)="selectItem(note)" [ngClass]="{ 'active': note == selectedNote }" [disabled]="note == selectedNote" class="list-group-item">
+          <button *ngFor="let note of notes" (click)="selectItem(note)" [ngClass]="{ 'active': note == selectedNote }" [disabled]="note == selectedNote"
+            class="list-group-item">
             <div>
               <p>{{ note.title }}</p>
               <p class="badge">{{ note.createdOn }}</p>
@@ -52,12 +53,14 @@
           <div class="panel-body">
             <form>
               <div class="form-group">
-                <label for="email">Title:</label>
-                <input type="text" class="form-control" id="email">
+                <label for="note-title">Title:</label>
+                <input type="text" [(ngModel)]="newNote.title" class="form-control" name="note-title" id="note-title">
+                <blockquote>{{ newNote.title }}</blockquote>
               </div>
               <div class="form-group">
                 <label for="note-content">Note:</label>
-                <textarea class="form-control new-note__content-input" name="note-content" id="note-content"></textarea>
+                <textarea [(ngModel)]="newNote.content" class="form-control new-note__content-input" name="note-content" id="note-content"></textarea>
+                <blockquote>{{ newNote.content }}</blockquote>
               </div>
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
