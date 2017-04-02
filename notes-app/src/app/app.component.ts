@@ -27,6 +27,9 @@ export class AppComponent {
   }
 
   onSubmit() {
-    console.log('added!');
+    this.newNote.createdOn = new Date();
+
+    this.notes.push(this.newNote);
+    this.newNote = {} as Note;
   }
 }

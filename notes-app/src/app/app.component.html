@@ -55,12 +55,10 @@
               <div class="form-group">
                 <label for="note-title">Title:</label>
                 <input type="text" [(ngModel)]="newNote.title" required class="form-control" name="note-title" id="note-title">
-                <blockquote>{{ newNote.title }}</blockquote>
               </div>
               <div class="form-group">
                 <label for="note-content">Note:</label>
                 <textarea [(ngModel)]="newNote.content" required class="form-control new-note__content-input" name="note-content" id="note-content"></textarea>
-                <blockquote>{{ newNote.content }}</blockquote>
               </div>
               <button type="submit" [disabled]="!newNoteForm.form.valid" class="btn btn-success">Submit</button>
             </form>
