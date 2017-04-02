@@ -25,4 +25,8 @@ export class AppComponent {
   selectItem(note: Note) {
     this.selectedNote = note;
   }
+
+  onSubmit() {
+    console.log('added!');
+  }
 }
