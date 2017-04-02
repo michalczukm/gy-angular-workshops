@@ -23,8 +23,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.notes = this.notesService.get();
-    this.selectedNote = this.notes[0];
+    this.fetchNotes();
   }
 
   onSelectedItem(note: Note) {
@@ -33,11 +32,18 @@ export class AppComponent implements OnInit {
   }
 
   onCreatedItem(note: Note) {
-    this.notesService.push(note);
+    this.notesService.push(note).subscribe(() => this.fetchNotes());
     this.viewState = NotesViewState.display;
   }
 
   createNote() {
     this.viewState = NotesViewState.create;
+  }
+
+  private fetchNotes() {
+    this.notesService.get().subscribe(notes => {
+      this.notes = notes;
+      this.selectedNote = this.notes[0];
+    });
   }
 }

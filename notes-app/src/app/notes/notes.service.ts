@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Note } from './note.model';
 
 @Injectable()
@@ -10,11 +11,13 @@ export class NotesService {
       { title: 'Fourth note', content: 'Fourth note sample content', createdOn: new Date(2017, 4, 4, 18, 30) },
     ] as Note[];
 
-    get(): Note[] {
-        return this.notes;
+    get(): Observable<Note[]> {
+        return Observable.from([this.notes]);
     }
 
-    push(note: Note) {
+    push(note: Note): Observable<{}> {
         this.notes.push(note);
+
+        return Observable.empty();
     }
 }
