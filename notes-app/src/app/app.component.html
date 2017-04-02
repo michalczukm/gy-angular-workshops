@@ -17,22 +17,10 @@
         </div>
         <!--BEGIN: Notes list-->
         <div class="list-group side__list">
-          <button class="list-group-item">
+          <button *ngFor="let note of notes" class="list-group-item">
             <div>
-              <p>First note</p>
-              <p class="badge">01/04/2017 15:30</p>
-            </div>
-          </button>
-          <button class="list-group-item active">
-            <div>
-              <p>Second note</p>
-              <p class="badge">02/04/2017 16:30</p>
-            </div>
-          </button>
-          <button class="list-group-item">
-            <div>
-              <p>Third note</p>
-              <p class="badge">03/04/2017 17:30</p>
+              <p>{{ note.title }}</p>
+              <p class="badge">{{ note.createdOn }}</p>
             </div>
           </button>
         </div>
