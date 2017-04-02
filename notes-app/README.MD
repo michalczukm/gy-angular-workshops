@@ -11,3 +11,4 @@
  * Handle `+` button with `createNote` method (create it) and hide `app-note-details` component if you're in creating state
  * Hide `app-create-note` component if you're only watching details.
  * Tip - use `*ngIf` and think about some state .. maybe variable, maybe enum.
+ 8. Now we're storing `notes` in services. Change the code to only `fetch` the data from service after adding new note.
