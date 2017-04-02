@@ -4,7 +4,11 @@ var NotesService = (function () {
         this.notes = [];
     }
     NotesService.prototype.add = function (text) {
-        this.notes.push(text);
+        var newNote = {
+            text: text,
+            createdOnDate: new Date()
+        };
+        this.notes.push(newNote);
     };
     NotesService.prototype.get = function () {
         return this.notes;

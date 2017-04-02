@@ -1,6 +1,6 @@
 export interface NotesServiceInterface {
     add(text: string): void;
-    get(): string[];
+    get(): Note[];
 }
 
 // class - like in ES6, or C# or Java or C++
@@ -8,14 +8,24 @@ export interface NotesServiceInterface {
 // Now it has to implement interface
 export class NotesService implements NotesServiceInterface {
     // access modifiers - wow
-    private notes: string[] = [];
+    private notes: Note[] = [];
 
     add(text: string) {
-        this.notes.push(text);
+        const newNote = {
+            text: text,
+            createdOnDate: new Date()
+        } as Note;
+
+        this.notes.push(newNote);
     }
 
     // optional strong typing
-    get(): string[] {
+    get(): Note[] {
         return this.notes;
     }
+}
+
+export type Note = {
+    text: string,
+    createdOnDate: Date
 }
