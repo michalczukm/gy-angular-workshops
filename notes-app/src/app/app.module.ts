@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NoteDetailsComponent } from './notes/note-details.component';
 import { NotesListComponent } from './notes/notes-list.component';
+import { CreateNoteComponent } from './notes/create-note.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NoteDetailsComponent,
-    NotesListComponent
+    NotesListComponent,
+    CreateNoteComponent
   ],
   imports: [
     BrowserModule,

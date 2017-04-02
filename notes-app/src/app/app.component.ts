@@ -9,7 +9,6 @@ import { Note } from './notes/note.model';
 export class AppComponent {
   notes: Note[] = [];
   selectedNote: Note;
-  newNote = {} as Note;
 
   constructor() {
     this.notes = [
@@ -26,10 +25,7 @@ export class AppComponent {
     this.selectedNote = note;
   }
 
-  onSubmit() {
-    this.newNote.createdOn = new Date();
-
-    this.notes.push(this.newNote);
-    this.newNote = {} as Note;
+  onCreatedItem(note: Note) {
+    this.notes.push(note);
   }
 }
