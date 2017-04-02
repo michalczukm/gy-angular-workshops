@@ -13,4 +13,8 @@ export class NotesService {
     get(): Note[] {
         return this.notes;
     }
+
+    push(note: Note) {
+        this.notes.push(note);
+    }
 }

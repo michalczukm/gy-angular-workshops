@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Note } from './notes/note.model';
 import { NotesService } from './notes/notes.service';
 
@@ -12,7 +12,7 @@ enum NotesViewState {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   notes: Note[] = [];
   selectedNote: Note;
   viewState = NotesViewState.display;
@@ -20,6 +20,9 @@ export class AppComponent {
   notesViewStateRef = NotesViewState;
 
   constructor(private notesService: NotesService) {
+  }
+
+  ngOnInit() {
     this.notes = this.notesService.get();
     this.selectedNote = this.notes[0];
   }
@@ -30,7 +33,7 @@ export class AppComponent {
   }
 
   onCreatedItem(note: Note) {
-    this.notes.push(note);
+    this.notesService.push(note);
     this.viewState = NotesViewState.display;
   }
 
