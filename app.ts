@@ -1,7 +1,7 @@
 // import module ( ES6 way <3 )
-import { NotesService } from './notes.service';
+import { NotesService, NotesServiceInterface } from './notes.service';
 
-var service = new NotesService();
+var service: NotesServiceInterface = new NotesService();
 
 service.add('first note');
 service.add('goyello note ... the second one');
