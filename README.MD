@@ -8,6 +8,10 @@ This repository contains simple Angular application with few exercises in it - w
 
 :wave: Keep in mind that this code do not cover lot of fields, nor it doesn't have all-best practises.
 
+## Presentation in .pdf
+* [Just click this link, or clone repository](/presentation.pdf)
+
+
 ## Where to go next with learning Angular?
 It might sound too obvious - but do official **Tour of heroes** tutorial. It is really well written (:clap::clap::clap:) and always up to date!
 
