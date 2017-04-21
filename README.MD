@@ -21,10 +21,11 @@ It might sound too obvious - but do official **Tour of heroes** tutorial. It is 
 
 ## Preconditions before you run enything here:
 1. clone the repository
-1. install `nodejs` (if you don't have it)
+1. install `nodejs` (if you don't have it) from [nodejs.org](https://nodejs.org/en/)
 
 ## How to run `notes-app`
-1. install `@angular/cli` npm package (if you don't have it)
+1. install globally `@angular/cli` npm package (if you don't have it)
+    * run `npm install -g` from console
 1. go to `notes-app` folder
     * install all packages by `npm install`
     * run application by `npm start`
