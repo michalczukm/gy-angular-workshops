@@ -1,3 +1,87 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <div class="container">
+    <div class="page-header">
+      <h1 style="display: inline-block">
+        <img src="assets/goyello-logo.png" style="width: 65px;"> Notes app</h1>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6 side">
+        <div class="notes-list__button">
+          <h4 class="notes-list__button__elements">Your recent notes</h4>
+          <button class="btn btn-success btn-lg notes-list__button__elements pull-right">+</button>
+        </div>
+        <!--BEGIN: Notes list-->
+        <div class="list-group side__list">
+          <button class="list-group-item">
+            <div>
+              <p>First note</p>
+              <p class="badge">01/04/2017 15:30</p>
+            </div>
+          </button>
+          <button class="list-group-item active">
+            <div>
+              <p>Second note</p>
+              <p class="badge">02/04/2017 16:30</p>
+            </div>
+          </button>
+          <button class="list-group-item">
+            <div>
+              <p>Third note</p>
+              <p class="badge">03/04/2017 17:30</p>
+            </div>
+          </button>
+        </div>
+        <!--END: Notes list-->
+      </div>
+
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <!--BEGIN: Note details-->
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3>
+              Second note
+            </h3>
+            <h4>
+              02/04/2017 16:30
+            </h4>
+          </div>
+          <div class="panel-body">
+            <p class="text-justify">
+              Helvetica hell of poke, occupy pop-up scenester keffiyeh taxidermy thundercats bicycle rights. Truffaut brooklyn tilde ennui
+              put a bird on it vexillologist, cardigan vaporware actually photo booth snackwave. Locavore paleo ennui, cornhole
+              VHS flexitarian mustache cred ethical kinfolk bicycle rights migas. Direct trade hashtag shoreditch pitchfork
+              seitan, salvia kogi pinterest mustache cliche. Pop-up neutra raw denim yuccie, chartreuse keffiyeh cliche godard
+              shoreditch freegan man bun chia. Pabst salvia artisan, tilde pitchfork fingerstache vegan bushwick. Jianbing
+              truffaut authentic mixtape, vice trust fund gochujang live-edge drinking vinegar fanny pack slow-carb venmo
+              VHS flannel health goth.
+            </p>
+          </div>
+        </div>
+        <!--END: Note details-->
+        <!--BEGIN: New note form-->
+        <div class="panel panel-success">
+          <div class="panel-heading">New note</div>
+          <div class="panel-body">
+            <form>
+              <div class="form-group">
+                <label for="email">Title:</label>
+                <input type="text" class="form-control" id="email">
+              </div>
+              <div class="form-group">
+                <label for="note-content">Note:</label>
+                <textarea class="form-control new-note__content-input" name="note-content" id="note-content"></textarea>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!--END: New note form-->
+      </div>
+    </div>
+  </div>
+</main>

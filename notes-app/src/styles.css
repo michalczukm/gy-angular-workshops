@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+.notes-list__button {
+    margin-bottom: 15px;
+}
+
+.notes-list__button__elements {
+    display: inline-block;
+}
+
+.new-note__content-input {
+    min-height: 200px;
+    max-width: 100%;
+}

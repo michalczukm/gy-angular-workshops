@@ -7,5 +7,6 @@
         "**/out-tsc": true
     },
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000
+    "files.autoSaveDelay": 1000,
+    "html.suggest.html5": true
 }
