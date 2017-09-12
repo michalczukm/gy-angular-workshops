@@ -1,15 +1,15 @@
-# Angular 2 short workshops: Liderferencja 2017, Gdańsk
+# Angular 4 - My __very__ first application
 
-## TypeScript basics and Angular 2 short
-This repository contains simple Angular application with few exercises in it - which are created for workshops purpouse.
+## TypeScript basics and Angular 4 short
+This repository contains simple Angular application with few exercises in it - which are created for workshops purpose.
 
-* [`notes-app` Angular 2 app here](notes-app/)
+* [`notes-app` Angular 4 app here](notes-app/)
 * [TypeScript examples here](typescript-examples/)
 
-:wave: Keep in mind that this code do not cover lot of fields, nor it doesn't have all-best practises.
+:wave: Keep in mind that this code do not cover lot of fields, nor it doesn't have all-best practices.
 
 ## Presentation in .pdf
-* [Just click this link, or clone repository](/presentation.pdf)
+* [Just click this link, or clone repository](/gy-angular-presentation.pdf)
 
 
 ## Where to go next with learning Angular?
@@ -19,7 +19,7 @@ It might sound too obvious - but do official **Tour of heroes** tutorial. It is 
 
 ---
 
-## Preconditions before you run enything here:
+## Preconditions before you run anything here:
 1. clone the repository
 1. install `nodejs` (if you don't have it) from [nodejs.org](https://nodejs.org/en/)
 
@@ -34,10 +34,10 @@ It might sound too obvious - but do official **Tour of heroes** tutorial. It is 
 ## How to run `typescript-examples`
 Distribution is versioned here.
 
-Just run `node dist/app.js`.
+Go to `typescript-examples` folder and just run `npm start`.
 
-##### But if you really want to compile it, the way without installing `tsc` globally:
+##### But if you want to compile it, then:
 1. go to `typescript-examples`
-1. install locally typescript by `npm install typescript`
-1. compile by `node_modules/typescript/bin/tsc -p tsconfig.json`
-1. run app by `node dist/app.js`
+1. install dependencies by `npm install`
+1. compile by `npm run compile`
+1. run app by `npm start`
