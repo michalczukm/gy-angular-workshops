@@ -5,8 +5,10 @@ This repository contains simple Angular application with few exercises in it - w
 
 * [`notes-app` Angular 4 app here](notes-app/)
 * [TypeScript examples here](typescript-examples/)
+* [Final application - deployed on GitHub-Pages](https://michalczukm.github.io/gy-angular-workshops/)
 
-:wave: Keep in mind that this code do not cover lot of fields, nor it doesn't have all-best practices.
+:wave: Keep in mind that this code and workshops **does not cover lot of fields**, nor it doesn't have all-best practices.
+It is a nice and easy introduction to `Angular` applications development.
 
 ## Presentation in .pdf
 * [Just click this link, or clone repository](/gy-angular-presentation.pdf)
